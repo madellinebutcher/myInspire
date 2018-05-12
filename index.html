@@ -1,0 +1,47 @@
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Inspire</title>
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body id="body">
+	<div id="weather">
+		
+	</div>
+
+	<div id="quote">
+		
+	</div>
+
+	<div id="todo">
+        <div id="todolist"></div>
+		<form onsubmit="app.controllers.todoController.addTodoFromForm(event)">
+            <input type="text" name="newtodo" placeholder="To Do">
+        </form>
+		
+	</div>
+
+
+
+
+	<!--JS Libraries-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!--Services-->
+	<script src="app/components/weather/weather-service.js"></script>
+	<script src="app/components/image/image-service.js"></script>
+	<script src="app/components/quote/quote-service.js"></script>
+	<script src="app/components/todo/todo-service.js"></script>
+
+	<!--Controllers-->
+	<script src="app/components/weather/weather-controller.js"></script>
+	<script src="app/components/image/image-controller.js"></script>
+	<script src="app/components/quote/quote-controller.js"></script>
+	<script src="app/components/todo/todo-controller.js"></script>
+
+	<!--Initialize App-->
+	<script src="app/init.js"></script>
+</body>
+
+</html>
