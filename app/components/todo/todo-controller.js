@@ -37,7 +37,7 @@ function TodoController() {
                 <li>${todo.description}</li>
                
                 
-                <button onclick="app.controllers.todoController.removeTodo('${todo._id}')"><i class="far fa-trash-alt"></i></button>
+                <button type="button" onclick="app.controllers.todoController.removeTodo('${todo._id}')"><i class="far fa-trash-alt"></i></button>
                 
                 `
             }
@@ -48,7 +48,7 @@ function TodoController() {
                 
                 <li class="strike">${todo.description}</li>
                 
-                <button onclick="app.controllers.todoController.removeTodo('${todo._id}')"><i class="far fa-trash-alt"></i></button>
+                <button type="button" onclick="app.controllers.todoController.removeTodo('${todo._id}')"><i class="far fa-trash-alt"></i></button>
 				
                 
                 `

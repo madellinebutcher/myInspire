@@ -48,10 +48,11 @@
     <section class="container-fluid todo-bg">
 	<div class="row" id="todo">
         
-        <div id="todolist"></div>
-        <div>   
+        
+        <div class="d-inline-block">   
             <form onsubmit="app.controllers.todoController.addTodoFromForm(event)">
-                <input type="text" name="newtodo" placeholder="To Do">
+                    <div id="todolist"></div>
+                    <input type="text" name="newtodo" placeholder="To Do">
             </form>
         </div> 	
 	</div>
