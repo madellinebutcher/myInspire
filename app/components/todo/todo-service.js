@@ -62,7 +62,8 @@ function TodoService() {
         // Umm this one is on you to write.... It's also unique, like the ajax call above. The method is a DELETE
         $.ajax({
             method:'DELETE',
-            url: baseUrl + '/' + todoId
+			url: baseUrl + '/' + todoId,
+			contentType: 'application/json'
         })
             .then(cb)
 		

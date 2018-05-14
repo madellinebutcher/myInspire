@@ -17,8 +17,15 @@ function TodoController() {
 	function draw(todos) {
 		//WHAT IS MY PURPOSE?
         //BUILD YOUR TODO TEMPLATE HERE
-        
-		var template = `<h2><ul>To Dos Left:${todos.length}</h2>`
+		var count = 0;
+		for (let i = 0; i <todos.length; i++) {
+			const checked = todos[i];
+			if(!checked.completed){
+				count++
+			}
+				
+		}
+		var template = `<h2><ul>To Dos Left:${count}</h2>`
         for (let i = 0; i < todos.length; i++) {
 			const todo = todos[i];
             if (todo.completed == false) {
@@ -30,7 +37,7 @@ function TodoController() {
                 <li>${todo.description}</li>
                
                 
-                <button onclick="app.controllers.todoController.removeTodo('${todo._id}')">DELETE</button>
+                <button onclick="app.controllers.todoController.removeTodo('${todo._id}')"><i class="far fa-trash-alt"></i></button>
                 
                 `
             }
@@ -41,8 +48,8 @@ function TodoController() {
                 
                 <li class="strike">${todo.description}</li>
                 
-                <button onclick="app.controllers.todoController.removeTodo('${todo._id}')">DELETE</button>
-                
+                <button onclick="app.controllers.todoController.removeTodo('${todo._id}')"><i class="far fa-trash-alt"></i></button>
+				
                 
                 `
             }
