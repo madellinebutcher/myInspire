@@ -3,6 +3,7 @@
     background-repeat: no-repeat;
     height: 100%;
     color:white;
+    font-family: 'Dancing Script', cursive;
 }
 form{
     margin-top:15vh;
@@ -14,6 +15,7 @@ li{
     background-color: rgba(0, 0, 0, 0.479);
     border-radius: 2vw;
     text-align: center;
+    font-family: 'Kaushan Script', cursive;
 }
 .q-words{
     padding:2vw;
@@ -55,8 +57,7 @@ h3{
     padding-left:3vw;
 }
 #todolist{
-    padding-left: 3vw;
-    padding-top: 2vh;
+    padding:0;
 }
 .todo-bg{
     width:50vw;
@@ -70,4 +71,7 @@ h3{
 }
 .todo-del{
     padding-right:2vw;
+}
+ul{
+    padding:0;
 }

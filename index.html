@@ -5,6 +5,7 @@
     <title>Inspire</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Kaushan+Script" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
    
 </head>
@@ -46,11 +47,12 @@
     <section class="container-fluid todo-bg">
 	<div class="row" id="todo">
         
-        <div class="row" id="todolist"></div>
+        <div id="todolist"></div>
+    <div class="row">   
 		<form onsubmit="app.controllers.todoController.addTodoFromForm(event)">
             <input type="text" name="newtodo" placeholder="To Do">
         </form>
-		
+	</div> 	
 	</div>
     </section>
 
