@@ -4,3 +4,69 @@
     height: 100%;
     color:white;
 }
+form{
+    margin-top:15vh;
+}
+li{
+    list-style-type: none;
+}
+#quote{
+    background-color: rgba(0, 0, 0, 0.479);
+    border-radius: 2vw;
+    text-align: center;
+}
+.q-words{
+    padding:2vw;
+}
+.q-author{
+    padding:2vw;
+}
+#weather{
+    text-align: center;
+}
+.w-bg{
+    background-color: rgba(0, 0, 0, 0.479);
+    border-radius: 2vw;
+}
+h5{
+    margin:0;
+}
+h3{
+    margin:0;
+}
+#time{
+    
+    color:rgb(253, 249, 5);
+}
+.p-section{
+    padding-left:50vh;
+}
+.p-intro{
+    font-size: 5vh;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.479);
+    border-radius: 1vw;
+    width:30vh;
+}
+
+#todo{
+    background-color: rgba(0, 0, 0, 0.479);
+    border-radius: 1vw;
+}
+#todolist{
+    padding-left: 3vw;
+    padding-top: 2vh;
+}
+.todo-bg{
+    width:50vw;
+}
+.check-box{
+    padding:0;
+    width:2vw;
+}
+.todo-des{
+    padding:0;
+}
+.todo-del{
+    padding-right:2vw;
+}

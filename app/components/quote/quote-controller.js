@@ -5,8 +5,12 @@ function QuoteController(){
     function drawQuote(quote){
         var template = ""
         template += `
-        <h1>${quote.quote}</h1>
-        <h2>${quote.author}</h2>
+        <div class="q-words">
+        <h3>${quote.quote}</h3>
+        </div>
+        <div class="q-author">
+        <h5>${quote.author}</h5>
+        </div>
         `
     document.getElementById('quote').innerHTML = template
     }
@@ -15,5 +19,7 @@ function QuoteController(){
 
 	qs.getQuote(function(quote){
 		console.log('What is the quote', quote)
-	})
+    })
+    
+  
 }

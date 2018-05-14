@@ -18,21 +18,33 @@ function TodoController() {
 		//WHAT IS MY PURPOSE?
         //BUILD YOUR TODO TEMPLATE HERE
         
-        var template = "<ul>";
+        var template = "<ul class='row'>";
         for (let i = 0; i < todos.length; i++) {
             const todo = todos[i];
             if (todo.completed== false) {
                 template += `
-                <li>${todo.description}</li>
+                <div class="check-box">
                 <input Type="checkbox" onclick="app.controllers.todoController.toggleTodoStatus('${todo._id}')"></input>
+                </div>
+                <div class="todo-des">
+                <li>${todo.description}</li>
+                </div>
+                <div class="todo-del">
                 <button onclick="app.controllers.todoController.removeTodo('${todo._id}')">DELETE</button>
+                </div>
                 `
             }
             else {
                 template += `
-                <li>${todo.description}</li>
+                <div>
                 <input Type="checkbox" onclick="app.controllers.todoController.toggleTodoStatus('${todo._id}')" checked></input>
+                </div>
+                <div>
+                <li>${todo.description}</li>
+                </div>
+                <div>
                 <button onclick="app.controllers.todoController.removeTodo('${todo._id}')">DELETE</button>
+                </div>
                 `
             }
             template += "</ul>"
@@ -43,7 +55,8 @@ function TodoController() {
 	}
     
 	this.addTodoFromForm = function (e) {
-		e.preventDefault() // <-- hey this time its a freebie don't forget this
+        
+		e.preventDefault(); // <-- hey this time its a freebie don't forget this
 		// TAKE THE INFORMATION FORM THE FORM
         var form = e.target
         

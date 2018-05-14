@@ -6,8 +6,11 @@ function WeatherController(){
         var fahrenheit = Math.floor((9/5) * (weather.main.temp - 273) + 32);
         var template = ""
         template += `
-        <h5>${fahrenheit}°</h5>
-        <h5>${weather.name}</h5>
+        <div class="w-bg">
+        <h5 class="mx-2">${fahrenheit}°</h5>
+        
+        <h6 class="mx-2">${weather.name}</h6>
+        </div>
         `
         document.getElementById('weather').innerHTML = template
     }

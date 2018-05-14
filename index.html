@@ -2,27 +2,57 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Inspire</title>
-	<link rel="stylesheet" href="assets/css/style.css">
+    <title>Inspire</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+   
 </head>
 
-<body id="body">
-	<div id="weather">
+<body id="body" onload="startTime()">
+    <section class="container-fluid">
+	<div class="row d-flex justify-content-end" id="weather">
 		
 	</div>
+    </section>
+    <section>
+            <script>function startTime() {
+                    var today = new Date();
+                    var h = today.getHours();
+                    var m = today.getMinutes();
+                    var s = today.getSeconds();
+                    m = checkTime(m);
+                    s = checkTime(s);
+                    document.getElementById('time').innerHTML =
+                    h + ":" + m  
+                    document.getElementById('time').style.fontSize = '800%'
+                }
+                function checkTime(i) {
+                    if (i < 10) {i = "0" + i};  
+                    return i;
+                }
+                </script>
 
-	<div id="quote">
+            <div class="row justify-content-center" id="time"></div>
+    </section>
+    <section class="p-section">
+        <p class="p-intro">Hello, Maddy!</p>
+    </section>
+    <section class="container">
+	<div class="row d-flex justify-content-center" id="quote">
 		
 	</div>
-
-	<div id="todo">
-        <div id="todolist"></div>
+    </section>
+    <section class="container-fluid todo-bg">
+	<div class="row" id="todo">
+        
+        <div class="row" id="todolist"></div>
 		<form onsubmit="app.controllers.todoController.addTodoFromForm(event)">
             <input type="text" name="newtodo" placeholder="To Do">
         </form>
 		
 	</div>
-
+    </section>
 
 
 
@@ -38,7 +68,8 @@
 	<script src="app/components/weather/weather-controller.js"></script>
 	<script src="app/components/image/image-controller.js"></script>
 	<script src="app/components/quote/quote-controller.js"></script>
-	<script src="app/components/todo/todo-controller.js"></script>
+    <script src="app/components/todo/todo-controller.js"></script>
+
 
 	<!--Initialize App-->
 	<script src="app/init.js"></script>
