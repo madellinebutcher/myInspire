@@ -13,7 +13,7 @@ function TodoController() {
 		//FYI DONT EDIT ME :)
 		todoService.getTodos(draw)
 	}
-
+    
 	function draw(todos) {
 		//WHAT IS MY PURPOSE?
         //BUILD YOUR TODO TEMPLATE HERE
@@ -21,7 +21,7 @@ function TodoController() {
         var template = "<ul>";
         for (let i = 0; i < todos.length; i++) {
             const todo = todos[i];
-            if (todo.completed== false) {
+            if (todo.completed == false) {
                 template += `
                 
                 <input Type="checkbox" onclick="app.controllers.todoController.toggleTodoStatus('${todo._id}')"></input>
@@ -88,5 +88,5 @@ function TodoController() {
 	}
 
 	// IF YOU WANT YOUR TODO LIST TO DRAW WHEN THE PAGE FIRST LOADS WHAT SHOULD YOU CALL HERE???
-
+getTodos()
 }
