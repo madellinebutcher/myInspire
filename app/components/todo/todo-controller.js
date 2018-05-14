@@ -31,26 +31,26 @@ function TodoController() {
             if (todo.completed == false) {
                 template += `
                 
-                <input type="checkbox" onclick="app.controllers.todoController.toggleTodoStatus('${todo._id}')"></input>
+                <li><input type="checkbox" onclick="app.controllers.todoController.toggleTodoStatus('${todo._id}')"></input>
               
                
-                <li>${todo.description}</li>
+                ${todo.description}
                
                 
                 <button type="button" onclick="app.controllers.todoController.removeTodo('${todo._id}')"><i class="far fa-trash-alt"></i></button>
-                
+                </li>
                 `
             }
             else {
                 template += `
                 
-                <input type="checkbox" onclick="app.controllers.todoController.toggleTodoStatus('${todo._id}')" checked></input> 
+                <li class="strike"><input type="checkbox" onclick="app.controllers.todoController.toggleTodoStatus('${todo._id}')" checked></input> 
                 
-                <li class="strike">${todo.description}</li>
+                ${todo.description}
                 
                 <button type="button" onclick="app.controllers.todoController.removeTodo('${todo._id}')"><i class="far fa-trash-alt"></i></button>
 				
-                
+                </li>
                 `
             }
              

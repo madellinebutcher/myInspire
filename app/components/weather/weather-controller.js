@@ -10,8 +10,8 @@ function WeatherController(){
         var template = ""
         template += `
         <div class="w-bg">
-        <h5 class="mx-2">${fahrenheit}°F</h5>
-        <img class="w-img" src="http://openweathermap.org/img/w/${weather.weather[0].icon}.png">
+        <h5 class="mx-2">${fahrenheit}°F <img class="w-img" src="http://openweathermap.org/img/w/${weather.weather[0].icon}.png"></h5>
+        
         
         <h6 class="mx-2">${weather.name}</h6>
         </div>
