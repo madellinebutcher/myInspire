@@ -41,14 +41,14 @@ h3{
     color:rgb(253, 249, 5);
 }
 .p-section{
-    padding-left:50vh;
+    padding-left:40vw;
 }
 .p-intro{
-    font-size: 5vh;
+    font-size: 8vh;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.479);
     border-radius: 1vw;
-    width:30vh;
+    width:40vh;
 }
 
 #todo{
