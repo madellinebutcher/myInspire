@@ -10,6 +10,7 @@ form{
 }
 li{
     list-style-type: none;
+    
 }
 #quote{
     background-color: rgba(0, 0, 0, 0.479);
@@ -29,6 +30,7 @@ li{
 .w-bg{
     background-color: rgba(0, 0, 0, 0.479);
     border-radius: 1vw;
+    margin-right:1vw;
 }
 h5{
     margin:0;
@@ -77,4 +79,7 @@ ul{
 }
 .w-image{
     margin:0;
+}
+.strike{
+    text-decoration: line-through;
 }

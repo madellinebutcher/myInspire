@@ -18,13 +18,13 @@ function TodoController() {
 		//WHAT IS MY PURPOSE?
         //BUILD YOUR TODO TEMPLATE HERE
         
-        var template = "<ul>";
+		var template = `<h2><ul>To Dos Left:${todos.length}</h2>`
         for (let i = 0; i < todos.length; i++) {
-            const todo = todos[i];
+			const todo = todos[i];
             if (todo.completed == false) {
                 template += `
                 
-                <input Type="checkbox" onclick="app.controllers.todoController.toggleTodoStatus('${todo._id}')"></input>
+                <input type="checkbox" onclick="app.controllers.todoController.toggleTodoStatus('${todo._id}')"></input>
               
                
                 <li>${todo.description}</li>
@@ -37,22 +37,24 @@ function TodoController() {
             else {
                 template += `
                 
-                <input Type="checkbox" onclick="app.controllers.todoController.toggleTodoStatus('${todo._id}')" checked></input>
+                <input type="checkbox" onclick="app.controllers.todoController.toggleTodoStatus('${todo._id}')" checked></input> 
                 
-                <li>${todo.description}</li>
+                <li class="strike">${todo.description}</li>
                 
                 <button onclick="app.controllers.todoController.removeTodo('${todo._id}')">DELETE</button>
                 
                 
                 `
             }
-              
+             
         }
         template += "</ul>" 
         document.getElementById("todolist").innerHTML = template
 		//DONT FORGET TO LOOP
+
+		
     }
-  
+	
     
 	this.addTodoFromForm = function (e) {
         

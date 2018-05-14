@@ -6,7 +6,7 @@ function QuoteController(){
         var template = ""
         template += `
         <div class="q-words">
-        <h3>${quote.quote}</h3>
+        <p>${quote.quote}</p>
         </div>
         <div class="q-author">
         <h5>${quote.author}</h5>

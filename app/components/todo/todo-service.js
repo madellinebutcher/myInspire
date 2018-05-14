@@ -52,6 +52,7 @@ function TodoService() {
 			data: JSON.stringify(todoCheck)
 		})
 			.then(function (res) {
+				cb()
 				//DO YOU WANT TO DO ANYTHING WITH THIS?
 			})
 			.fail(logError)
