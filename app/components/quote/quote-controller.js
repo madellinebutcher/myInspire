@@ -5,11 +5,11 @@ function QuoteController(){
     function drawQuote(quote){
         var template = ""
         template += `
-        <div class="q-words">
+        <div class="q-words col-12">
         <p>${quote.quote}</p>
         </div>
-        <div class="q-author">
-        <h5>${quote.author}</h5>
+        <div class="q-author col-12">
+        <h6>${quote.author}</h6>
         </div>
         `
     document.getElementById('quote').innerHTML = template
